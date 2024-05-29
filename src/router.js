@@ -3,6 +3,7 @@ import Login from "./views/Login.vue";
 import Forget from "./views/Forget.vue";
 import Dashboard from "./views/Dashboard.vue";
 import Mail from "./views/Mail.vue";
+import AppEmailBody from "./components/AppEmailBody.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -21,8 +22,15 @@ export default createRouter({
             component: Dashboard
         },
         {
-            path: '/mail/:mailId?',
-            component: Mail
+            path: '/mail',
+            component: Mail,
+            children: [
+                {
+                    path: ':mailId?',
+                    component: AppEmailBody,
+                    props: true
+                }
+            ]
         }
     ],
     linkActiveClass: 'active',

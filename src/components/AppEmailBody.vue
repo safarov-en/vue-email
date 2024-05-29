@@ -15,7 +15,6 @@ export default {
   props: ['mailId'],
   computed: {
     email() {
-      console.log(this.mailId)
       return this.emails.find(e => e.id === +this.mailId)
     }
   }
