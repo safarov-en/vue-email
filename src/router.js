@@ -24,5 +24,7 @@ export default createRouter({
             path: '/mail',
             component: Mail
         }
-    ]
+    ],
+    linkActiveClass: 'active',
+    linkExactActiveClass: 'active'
 })
