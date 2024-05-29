@@ -21,7 +21,7 @@ export default createRouter({
             component: Dashboard
         },
         {
-            path: '/mail',
+            path: '/mail/:mailId?',
             component: Mail
         }
     ],
